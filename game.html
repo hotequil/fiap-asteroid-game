@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fuga do asteróide</title>
+        <style>
+            :root{
+                --default-space: 48px;
+                --principal-color: #000;
+                --border-size: 4px;
+                --border: var(--border-size) solid var(--principal-color);
+            }
+
+            *{
+                padding: 0;
+                margin: 0;
+                font-family: Arial, sans-serif;
+                text-decoration: none;
+                color: var(--principal-color);
+            }
+
+            .body{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100vh;
+            }
+
+            .title{
+                display: block;
+                margin: var(--default-space) auto 0 auto;
+                text-align: center;
+            }
+
+            .canvas{
+                margin: calc(var(--default-space) / 2) auto var(--default-space) auto;
+                display: block;
+                border-radius: var(--border-size);
+                border: var(--border);
+            }
+        
+            .link{
+                color: #0091ea;
+            }
+
+            .btn{
+                width: fit-content;
+                padding: calc(var(--default-space) / 2) var(--default-space);
+                border: var(--border);
+                border-radius: var(--border-size);
+                background-color: transparent;
+                font-size: calc(var(--default-space) / 2);
+                font-weight: 600;
+                margin: 0 auto;
+                cursor: pointer;
+                transition: opacity .25s;
+            }
+
+            .btn:hover, .btn:focus{
+                opacity: .75;
+            }
+
+            .btn:active{
+                opacity: .5;
+            }
+
+
+            .footer{
+                text-align: center;
+                display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                flex-grow: 1;
+                box-sizing: border-box;
+                padding: calc(var(--default-space) / 2);
+            }
+        </style>
+    </head>
+    <body class="body">
+        <h1 class="title">Fuga do asteróide</h1>
+        <canvas class="canvas" data-canvas width="800" height="400"></canvas>
+        <button data-btn class="btn" type="button">Reiniciar</button>
+        <footer class="footer"><span>Feito por <a class="link" rel="noopener noreferrer" href="https://github.com/hotequil" target="_blank">hotequil</a></span></footer>
+        <script src="./script.js"></script>
+    </body>
+</html>
