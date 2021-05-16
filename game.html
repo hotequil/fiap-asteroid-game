@@ -8,6 +8,7 @@
             :root{
                 --default-space: 48px;
                 --principal-color: #000;
+                --secundary-color: #0091ea;
                 --border-size: 4px;
                 --border: var(--border-size) solid var(--principal-color);
             }
@@ -36,14 +37,14 @@
             }
 
             .canvas{
-                margin: calc(var(--default-space) / 2) auto var(--default-space) auto;
+                margin: calc(var(--default-space) / 2) auto;
                 display: block;
                 border-radius: var(--border-size);
                 border: var(--border);
             }
         
             .link{
-                color: #0091ea;
+                color: var(--secundary-color);
             }
 
             .btn{
@@ -77,11 +78,24 @@
                 box-sizing: border-box;
                 padding: calc(var(--default-space) / 2);
             }
+
+            .best-points{
+                margin: 0 auto calc(var(--default-space) / 2) auto;
+                display: block;
+                text-align: center;
+                font-size: calc(var(--default-space) / 2);
+                color: var(--secundary-color);
+            }
+
+            .best-points--hide{
+                display: none;
+            }
         </style>
     </head>
     <body class="body">
         <h1 class="title">Fuga do asteróide <br>(teste em um dispositivo com teclado físico usando as setas dele)</h1>
         <canvas class="canvas" data-canvas width="800" height="400"></canvas>
+        <p data-best-points class="best-points best-points--hide"></p>
         <button data-btn class="btn" type="button">Reiniciar</button>
         <footer class="footer"><span>Feito por <a class="link" rel="noopener noreferrer" href="https://github.com/hotequil" target="_blank">hotequil</a></span></footer>
         <script src="./script.js"></script>
