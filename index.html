@@ -6,7 +6,7 @@
         <title>Fuga do asteróide</title>
         <style>
             :root{
-                --default-space: 48px;
+                --default-space: 36px;
                 --principal-color: #000;
                 --secundary-color: #0091ea;
                 --border-size: 4px;
@@ -19,6 +19,7 @@
                 font-family: Arial, sans-serif;
                 text-decoration: none;
                 color: var(--principal-color);
+                overflow: hidden;
             }
 
             .body{
@@ -32,7 +33,8 @@
 
             .title{
                 display: block;
-                margin: var(--default-space) auto 0 auto;
+                font-size: calc(var(--default-space) / 1.5);
+                margin: calc(var(--default-space) / 2) auto 0 auto;
                 text-align: center;
             }
 
@@ -49,7 +51,7 @@
 
             .btn{
                 width: fit-content;
-                padding: calc(var(--default-space) / 2) var(--default-space);
+                padding: calc(var(--default-space) / 4) calc(var(--default-space) / 2);
                 border: var(--border);
                 border-radius: var(--border-size);
                 background-color: transparent;
