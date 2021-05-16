@@ -3,7 +3,6 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Fuga do asteróide</title>
         <style>
             :root{
@@ -26,6 +25,8 @@
                 flex-direction: column;
                 justify-content: center;
                 height: 100vh;
+                box-sizing: border-box;
+                padding: 0 var(--default-space);
             }
 
             .title{
@@ -79,7 +80,7 @@
         </style>
     </head>
     <body class="body">
-        <h1 class="title">Fuga do asteróide</h1>
+        <h1 class="title">Fuga do asteróide <br>(teste em um dispositivo com teclado físico usando as setas dele)</h1>
         <canvas class="canvas" data-canvas width="800" height="400"></canvas>
         <button data-btn class="btn" type="button">Reiniciar</button>
         <footer class="footer"><span>Feito por <a class="link" rel="noopener noreferrer" href="https://github.com/hotequil" target="_blank">hotequil</a></span></footer>
