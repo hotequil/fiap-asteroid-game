@@ -259,7 +259,7 @@ const paint = (keyCode, speed = 25) => {
 
         ctx.textBaseline = 'top';
         ctx.fillStyle = remainingSeconds >= 4 ? principalColor : [...warningColors].reverse()[remainingSeconds - 1];
-        ctx.fillText(`Você pederá ${damagePoints} pontos se ficar parado por mais ${remainingSeconds} ${remainingSeconds > 1 ? 'segundos' : 'segundo'}`, ftSzDft, ftSzDft);
+        ctx.fillText(`Você perderá ${damagePoints} pontos se ficar parado por mais ${remainingSeconds} ${remainingSeconds > 1 ? 'segundos' : 'segundo'}`, ftSzDft, ftSzDft);
 
         selectAsteroid();
         draw(plane);
